@@ -36,6 +36,13 @@ input[type=file]::file-selector-button {
     background: var(--bluegray-50);
   }
 
+.map{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
   
   
   

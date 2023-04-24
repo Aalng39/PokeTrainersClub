@@ -42,7 +42,7 @@
         </form>
     </p-card>    
 
-    <p-card header="Looking To Go On A Pokémon Adventure! Register As A Trainer Now!" [style]="{ width: '45vw', 'margin-bottom': '30px'}">
+    <p-card header="Looking To Go On A Pokémon Adventure! Register As A Trainer Now!" [style]="{ width: '45vw'}">
         <form [formGroup]="signUpForm" (ngSubmit)="processSignUpForm()">
             <table>
                 <div class="block">    
@@ -126,5 +126,20 @@
                 </tr>
             </table>              
         </form>
+    </p-card>
+</div>
+
+<div class="map">
+    <p-card header="Locate The Nearest Pokemon Center!" [style]="{width: '87vw'}">
+        <iframe
+            width="1000"
+            height="220"
+            style="border-radius: 5px; border:0;"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDHAHm1kVocM8lXm9wuIRwki4Ye9LDng3I
+            &q=Pokemon+Center,Singapore">
+        </iframe>    
     </p-card>
 </div>
