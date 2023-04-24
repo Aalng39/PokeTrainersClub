@@ -76,9 +76,9 @@ export class LogInComponent implements OnInit{
     this.authService.logInUser(this.loginForm.value.email, this.loginForm.value.password).then((result: any) => {
       if(result == null){
         console.log('logging in...')
-        this.pokemonSvc.logInPokemonTrainer(this.loginForm.value.email).then(result => {
-        this.router.navigate(['/profile'])
+        this.pokemonSvc.logInPokemonTrainer(this.loginForm.value.email).then(result => { 
         this.messageService.add({ severity: 'success', summary: 'Successfully Logged in', detail: 'Welcome Back ' + result.username, life: 2000})
+        this.router.navigate(['/profile'])
         }).catch(() => {
           this.messageService.add({ severity: 'error', summary: 'Login Failed', detail: 'Invalid Username or Password! Please check!', life: 2000})
           console.log("user not found... ")
