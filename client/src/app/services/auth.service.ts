@@ -43,7 +43,7 @@ export class AuthService {
     })
     .catch(error => {
       console.log('Auth Service: login error...')
-      this.messageService.add({ severity: 'error', summary: 'Login Failed', detail: 'Invalid Email or Password.', life: 2000})
+      this.messageService.add({ severity: 'error', summary: 'Login Failed', detail: 'Invalid Email or Password! Please Check!', life: 2000})
     })
    }
 
