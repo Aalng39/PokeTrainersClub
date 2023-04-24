@@ -28,9 +28,7 @@ public class RedisConfig {
     // private String redisPassword;
 
     private String redisHost = System.getenv("SPRING_REDIS_HOST");
-
-    private Integer redisPort = Integer.valueOf(System.getenv("SPRING_REDIS_PORT"));
-    
+    private Integer redisPort = Integer.valueOf(System.getenv("SPRING_REDIS_PORT")); 
     private String redisPassword = System.getenv("SPRING_REDIS_PASSWORD");
     
     // @Bean("marvelcache") // must match qualifier name in RedisRepo.java
