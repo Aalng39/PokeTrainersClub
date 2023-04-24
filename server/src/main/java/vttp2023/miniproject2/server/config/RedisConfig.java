@@ -43,7 +43,6 @@ public class RedisConfig {
         final JedisClientConfiguration jedisClient = JedisClientConfiguration.builder().build();
         final JedisConnectionFactory jedisFac = new JedisConnectionFactory(config, jedisClient);
         jedisFac.afterPropertiesSet();
-
         // logger.info("redis host port > {redisHost} {redisPort}", redisHost, redisPort);
         RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(jedisFac);
