@@ -28,7 +28,9 @@ public class RedisConfig {
     // private String redisPassword;
 
     private String redisHost = System.getenv("SPRING_REDIS_HOST");
+
     private Integer redisPort = Integer.valueOf(System.getenv("SPRING_REDIS_PORT"));
+    
     private String redisPassword = System.getenv("SPRING_REDIS_PASSWORD");
     
     // @Bean("marvelcache") // must match qualifier name in RedisRepo.java
@@ -43,6 +45,7 @@ public class RedisConfig {
         final JedisClientConfiguration jedisClient = JedisClientConfiguration.builder().build();
         final JedisConnectionFactory jedisFac = new JedisConnectionFactory(config, jedisClient);
         jedisFac.afterPropertiesSet();
+
         // logger.info("redis host port > {redisHost} {redisPort}", redisHost, redisPort);
         RedisTemplate<String, Object> template = new RedisTemplate<>();
         template.setConnectionFactory(jedisFac);
