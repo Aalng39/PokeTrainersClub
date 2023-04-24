@@ -51,14 +51,13 @@ export class LogInComponent implements OnInit{
       console.log('>>> Form Data: ', formData)
       this.pokemonSvc.postPokemonTrainer(formData)
         .then(results => {
-          
           this.messageService.add({ severity: 'success', summary: 'Successfully Registered', detail: 'Hello ' + this.signUpForm.value.username + ', your acccount is registered', life: 2000})
+          this.router.navigate(['/'])
         }).catch(error => {
           console.log("Same primary key used...")
           this.signUpForm.reset()
         })
-        this.router.navigate(['/'])
-      
+        
       }else if(result.isValid == false){
       this.firebaseErrorMessage = result.message
     }
