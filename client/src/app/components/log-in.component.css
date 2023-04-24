@@ -1,0 +1,44 @@
+.block{
+    margin-bottom: 15px;
+}
+
+.block-div{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px;
+    column-count:  2;
+    column-gap: 30px;
+}
+
+::ng-deep .upload .p-fileupload-choose:hover{
+    background-color: var(--bluegray-50);
+    color: var(--bluegray-500);
+    border-color: var(--bluegray-500);
+}
+
+input[type=file]::file-selector-button {
+    margin-right: 20px;
+    font-size: small;
+    font-weight: bold;
+    border: solid 1px;
+    border-color: var(--bluegray-500);
+    background: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: var(--bluegray-500);
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    background: var(--bluegray-50);
+  }
+
+  
+  
+  
+  
+  
+  

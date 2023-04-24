@@ -1,0 +1,49 @@
+.block{
+    margin: 20px;  
+}
+
+::ng-deep .forum .p-panel-content{
+    background-image: url("https://youthosai.sgp1.digitaloceanspaces.com/myobjects/pokeball.png");
+}
+
+.post{
+    margin: 20px;
+    
+}
+
+.image{
+    height: 4vw;
+    width: 4vw;
+    border-radius: 5px;
+}
+
+.block{
+    margin-bottom: 10px;
+}
+
+::ng-deep p-button.postButton .p-button{
+    background-color: white;
+    color: var(--bluegray-500);
+    border-color: var(--bluegray-500);
+    margin-top: 20px;
+}
+
+::ng-deep p-button.postButton:hover .p-button{
+    background-color: var(--bluegray-50);
+    color: var(--bluegray-500);
+    border-color: var(--bluegray-500);
+}
+
+.bookmarkbutton{
+    display: flex;
+    justify-content: right;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    column-count: 2;
+    column-gap: 10px;
+}
+

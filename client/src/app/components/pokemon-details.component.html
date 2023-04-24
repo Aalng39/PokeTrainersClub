@@ -1,0 +1,94 @@
+<div class="block">
+    <p-fieldset legend={{result?.name}} [style]="{ width: '90vw' }">
+        <p-toast></p-toast>
+            <div class="bookmarkbutton">
+            <p-button class="bookmark" icon="pi pi-plus" styleClass="p-button-rounded" (click)="bookmark(result?.name, result?.imageUrl, result?.types)"></p-button>
+        </div>
+        <div class="block-div">
+            <img src={{result?.imageUrl}} [style]="{width: '300px', 'margin-bottom': '20px'}"/>  
+            <p-card header="Pokédex Data" subheader="National Pokédex Number #{{result?.id}}" [style]="{ width: '45vw' }">
+                <p><b>Species</b>: <span>{{result?.species}}</span></p>
+                <p-divider></p-divider>
+                <p>{{result?.description}}</p>
+                <p-divider></p-divider>
+                <div class="ability">
+                    <p><b>Height</b>: <span>{{result?.height/10}}</span>m</p>
+                    <p><b>Weight</b>: <span>{{result?.weight/10}}</span>kg</p>
+                
+                
+                    <p-button class="show" (click)="showDialog()" icon="pi pi-angle-up" label="Show Abilities"></p-button>
+                    <p-dialog header="Abilities" [(visible)]="visible" [modal]="true"  [style]="{width: '30vw'}"  [draggable]="false" [resizable]="false">
+                        <div class="ability" >
+                            <p *ngFor="let ability of result?.abilities">{{ability}}</p>
+                        </div>    
+                    </p-dialog>
+                </div>
+            </p-card>
+        </div>
+
+        
+        <p class="m-0"></p>
+    </p-fieldset>
+</div>
+<div class="block">
+    <p-accordion [multiple]="true" [style]="{ width: '90vw' }">
+        <div class="tabs">
+            <p-accordionTab header="Type">
+                <div class="types">
+                    <div *ngFor="let type of result?.types">
+                        <p-button class="{{type}}" [routerLink]="['/types/' , type]">{{type}}</p-button>
+                    </div> 
+                </div>
+            </p-accordionTab>
+        </div>
+        <div class="tabs">
+            <p-accordionTab header="Stats">
+                <div class="progress">
+                    <label>HP: </label>
+                    <p-progressBar id="hp" [showValue]="false" [value]="result?.baseStats.hp/2.5" [style]="{'width': '67vw'}"></p-progressBar>
+                </div>
+
+                <div class="progress">
+                    <label>Attack: </label>
+                    <p-progressBar id="atk" [showValue]="false" [value]="result?.baseStats.attack/2.5" [style]="{'width': '67vw'}"></p-progressBar>
+                </div>
+
+                <div class="progress">
+                    <label>Defense: </label>
+                    <p-progressBar id="def" [showValue]="false" [value]="result?.baseStats.defense/2.5" [style]="{'width': '67vw'}"></p-progressBar>
+                </div>
+
+                <div class="progress">
+                    <label>Special Attack: </label>
+                    <p-progressBar id="spatk" [showValue]="false" [value]="result?.baseStats.specialAttack/2.5" [style]="{'width': '67vw'}"></p-progressBar>
+                </div>
+
+                <div class="progress">
+                    <label>Special Defense: </label>
+                    <p-progressBar id="spdef" [showValue]="false" [value]="result?.baseStats.specialDefense/2.5" [style]="{'width': '67vw'}"></p-progressBar>
+                </div>
+                
+                <div class="progress">
+                    <label>Speed: </label>
+                    <p-progressBar id="speed" [showValue]="false" [value]="result?.baseStats.speed/2.5" [style]="{'width': '67vw'}"></p-progressBar>
+                </div>
+            </p-accordionTab>
+        </div>
+        <div id="tabs">
+            <p-accordionTab header="Evolution Chain">
+                <div class="evolution">
+                    <p-card header={{pokemonChain.name}} subheader="" [style]="{ width: '235px' }" *ngFor="let pokemonChain of result?.evolutionChain" class="pokecard">
+                        <ng-template pTemplate="header">
+                        <img alt="Card" src={{pokemonChain.imageUrl}} class="pokemage" [routerLink]="['/pokemon/' , pokemonChain.name]"/>
+                        </ng-template>
+                        <div class="types">
+                            <div *ngFor="let type of pokemonChain.types">
+                                <p-button class="{{type}}" [routerLink]="['/types/' , type]">{{type}}</p-button>
+                            </div>
+                        </div> 
+                    </p-card>
+                </div>
+            </p-accordionTab>
+        </div>
+    </p-accordion>
+</div>

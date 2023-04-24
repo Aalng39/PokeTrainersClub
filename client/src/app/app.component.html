@@ -1,0 +1,14 @@
+<div class="card">
+    <p-menubar [model]="items">
+        <ng-template pTemplate="start">
+            <img src="https://youthosai.sgp1.digitaloceanspaces.com/myobjects/pokeicon.png" height="40" class="mr-2" />
+        </ng-template>
+        
+        <ng-template pTemplate="end">  
+            <input type="text" pInputText placeholder=" Search" [(ngModel)]="nameOrId" 
+            (keydown.enter)="onKeyDown($event)" class="searchBar"/>
+        </ng-template>
+    </p-menubar>
+</div>
+
+<router-outlet></router-outlet>

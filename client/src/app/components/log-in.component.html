@@ -1,0 +1,130 @@
+<div class="block-div">
+    
+    <p-card header="Hey Trainers! Login Here!" [style]="{ width: '40vw', 'margin-bottom': '20px' }">
+        <form [formGroup]="loginForm" (ngSubmit)="processLoginForm()">
+            <table>
+                <div class="block">    
+                    <tr>
+                        <td>
+                            <label>Email</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> 
+                            <input type="text" pInputText formControlName="email" [style]="{'width':'18vw'}"/>
+                        </td>
+                    </tr>
+                </div>
+                <div class="block">
+                    <tr>
+                        <td>
+                            <label>Password</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p-password formControlName="password" [feedback]="false" [toggleMask]="true"></p-password>
+                        </td>
+                    </tr>
+                </div>
+                <tr>
+                    <td>
+                        <div *ngIf="firebaseErrorMessage != ''" class="error-style">
+                            <span>{{firebaseErrorMessage}}</span>
+                        </div>
+                        <p-toast></p-toast>
+                        <p-button label="Login" type="submit" 
+                        [disabled]="loginForm.invalid" 
+                        styleClass="p-button-outlined p-button-secondary p-button-sm"></p-button>
+                    </td>
+                </tr>
+            </table>              
+        </form>
+    </p-card>    
+
+    <p-card header="Looking To Go On A Pokémon Adventure! Register As A Trainer Now!" [style]="{ width: '45vw', 'margin-bottom': '30px'}">
+        <form [formGroup]="signUpForm" (ngSubmit)="processSignUpForm()">
+            <table>
+                <div class="block">    
+                    <tr>
+                        <td>
+                            <label>Username</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" pInputText formControlName="username" [style]="{'width':'18vw'}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <small>What's your Trainer name?
+                                Your name must be at least 3 characters long.</small>
+                        </td>
+                    </tr>
+                </div>
+                <div class="block">
+                    <tr>
+                        <td>
+                            <label>Email</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" pInputText formControlName="email" [style]="{'width':'18vw'}"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <small>Trainers' email will not be shared with anyone else.</small>
+                        </td>
+                    </tr>
+                </div>
+                <div class="block">
+                    <tr>
+                        <td>
+                            <label>Password</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p-password formControlName="password" [feedback]="false" [toggleMask]="true"></p-password>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <small>Your password must be 8-20 characters long, 
+                                and must not contain spaces, special characters, 
+                                or emoji.</small>
+                        </td>
+                    </tr>
+                </div>
+                <div class="block">
+                    <tr>
+                        <td>
+                            <label>Profile Photo</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="file" pInputText [style]="{'width':'35vw'}" formControlName="image" #file/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <small>Choose a photo that best represents you.</small>
+                        </td>
+                    </tr>
+                </div>
+                <tr>    
+                    <td>
+                        <div *ngIf="firebaseErrorMessage != ''" class="error-style">
+                            <span>{{firebaseErrorMessage}}</span>
+                        </div>
+                        <p-button type="submit" [disabled]="signUpForm.invalid" label="Create Account" styleClass="p-button-outlined p-button-secondary p-button-sm"></p-button>
+                    </td>
+                </tr>
+            </table>              
+        </form>
+    </p-card>
+</div>

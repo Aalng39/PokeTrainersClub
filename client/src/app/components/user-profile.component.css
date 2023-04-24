@@ -1,0 +1,64 @@
+.image{
+    height: 25vw;
+    width: 25vw;
+    border-radius: 5px;
+}
+
+.split{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-count: 2;
+    column-gap: 100px;
+}
+
+.user{
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    
+}
+.user-table{
+    margin: auto;
+    width: 70%;
+    text-align: center
+}
+
+.button-table{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10px;
+    
+    text-align: center
+}
+
+::ng-deep p-button.delete .p-button{
+    background-color: hsl(0, 52%, 54%);
+    border: solid 1px hsl(0, 52%, 54%);
+    color: rgb(255, 255, 255);
+    
+}
+
+::ng-deep p-button.delete:hover .p-button{
+    background-color: #c74d4db3;
+    border: solid 1px #c74d4db3;
+    color: rgb(255, 255, 255);
+}
+
+::ng-deep .confirm .p-confirm-dialog-accept{
+    background-color: hsl(0, 52%, 54%);
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    height: 41px;
+}
+
+::ng-deep .confirm .p-confirm-dialog-accept:hover{
+    background-color: hsl(0, 52%, 54%, 0.7);
+}

@@ -1,0 +1,23 @@
+<div class="block-div">
+        <p-card header={{pokemon.name}} subheader="" [style]="{ width: '235px' }" *ngFor="let pokemon of result" class="pokecard">
+            <ng-template pTemplate="header">
+                <img alt="Card" src={{pokemon.imageUrl}} class="pokemage" [routerLink]="['/pokemon/' , pokemon.name]"/>
+            </ng-template>
+                <div class="types" *ngFor="let type of pokemon.types">
+                    <p-button class="{{type}}" [routerLink]="['/types/' , type]">{{type}}</p-button>
+                </div> 
+            
+            <ng-template pTemplate="footer">
+                
+                <div class="bookmarkbutton">
+                <p-button class="bookmark" icon="pi pi-plus" styleClass="p-button-rounded" (click)="bookmark(pokemon.name, pokemon.imageUrl, pokemon.types)"></p-button>
+                </div>
+            </ng-template>
+        </p-card>
+</div>
+
+<p-toast></p-toast>
+
+<div class="card flex justify-content-center">
+    <p-paginator (onPageChange)="onPageChange($event)" [first]="first" [rows]="rows" [totalRecords]="200"></p-paginator>
+</div>

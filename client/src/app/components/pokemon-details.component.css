@@ -1,0 +1,394 @@
+.block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;  
+}
+
+.block-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-count: 2;
+    column-gap: 100px;
+}
+
+.tabs{
+    margin-bottom: 10px;
+}
+
+#tabs{
+    margin-bottom: 20px;
+}
+
+.evolution{  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokemage{
+    cursor: pointer;
+}
+
+.pokecard{
+    margin: 20px;
+}
+
+.bookmarkbutton{
+    float: right;
+    padding-left: 25px;
+}
+
+::ng-deep p-button.bookmark .p-button{
+    background-color: rgb(255, 255, 255);
+    border-color:hsl(0, 0%, 50%);
+    color: hsl(0, 0%, 50%);
+}
+
+::ng-deep p-button.bookmark:hover .p-button{
+    background-color: hsla(0, 0%, 80%);
+    border-color: hsl(0, 0%, 50%);
+    color: hsl(0, 0%, 50%);
+}
+
+.types{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-count: 2;
+    column-gap: 10px;
+}
+
+.ability{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+::ng-deep p-button.show .p-button{
+    background-color: hsl(0, 52%, 54%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 200px;
+}
+
+::ng-deep p-button.show:hover .p-button{
+    background-color: hsl(0, 52%, 54%, 0.7);
+}
+
+/* Button Colours Based on Type*/
+::ng-deep p-button.Grass .p-button{
+    background-color: hsl(98, 52%, 54%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: azure;
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Fire .p-button{
+    background-color: hsl(26, 85%, 56%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Water .p-button{
+    background-color: hsl(221, 82%, 66%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Bug .p-button{
+    background-color: hsl(67, 75%, 41%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Normal .p-button{
+    background-color: hsl(59, 21%, 57%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Dark .p-button{
+    background-color: hsl(24, 23%, 36%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Poison .p-button{
+    background-color: hsl(301, 45%, 44%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Electric .p-button{
+    background-color: hsl(48, 93%, 57%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Ground .p-button{
+    background-color: hsl(43, 68%, 64%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Fairy .p-button{
+    background-color: hsl(330, 50%, 68%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Fighting .p-button{
+    background-color: hsl(2, 66%, 46%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Psychic .p-button{
+    background-color: hsl(342, 93%, 65%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Rock .p-button{
+    background-color: hsl(50, 54%, 46%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Ghost .p-button{
+    background-color: hsl(266, 27%, 47%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Ice .p-button{
+    background-color: hsl(177, 47%, 72%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Dragon .p-button{
+    background-color: hsl(257, 97%, 60%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Flying .p-button{
+    background-color: hsl(256, 81%, 76%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+::ng-deep p-button.Steel .p-button{
+    background-color: hsl(240, 19%, 76%);
+    display: block;
+    border:none;
+    border-radius: 5px;
+    padding: 4px 10px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    height: 40px;
+    width: 80px;
+}
+
+/* After Hover */
+::ng-deep p-button.Grass:hover .p-button{
+    background-color: hsla(98, 52%, 54%, 0.70);
+}
+::ng-deep p-button.Fire:hover .p-button{
+    background-color: hsl(26, 85%, 56%, 0.70);
+}
+::ng-deep p-button.Water:hover .p-button{
+    background-color: hsl(221, 82%, 66%, 0.70);
+}
+::ng-deep p-button.Bug:hover .p-button{
+    background-color: hsl(67, 75%, 41%, 0.70);
+}
+::ng-deep p-button.Normal:hover .p-button{
+    background-color: hsl(59, 21%, 57%, 0.70);
+}
+::ng-deep p-button.Dark:hover .p-button{
+    background-color: hsl(24, 23%, 36%, 0.70);
+}
+::ng-deep p-button.Poison:hover .p-button{
+    background-color: hsl(301, 45%, 44%, 0.70);
+}
+::ng-deep p-button.Electric:hover .p-button{
+    background-color: hsl(48, 93%, 57%, 0.70);
+}
+::ng-deep p-button.Ground:hover .p-button{
+    background-color: hsl(43, 68%, 64%, 0.70);
+}
+::ng-deep p-button.Fairy:hover .p-button{
+    background-color: hsl(330, 50%, 68%, 0.70);
+}
+::ng-deep p-button.Fighting:hover .p-button{
+    background-color: hsl(2, 66%, 46%, 0.70);
+}
+::ng-deep p-button.Psychic:hover .p-button{
+    background-color: hsl(342, 93%, 65%, 0.70);
+}
+::ng-deep p-button.Rock:hover .p-button{
+    background-color: hsl(50, 54%, 46%, 0.70);
+}
+::ng-deep p-button.Ghost:hover .p-button{
+    background-color: hsl(266, 27%, 47%, 0.70);
+}
+::ng-deep p-button.Ice:hover .p-button{
+    background-color: hsl(177, 47%, 72%, 0.70);
+}
+::ng-deep p-button.Dragon:hover .p-button{
+    background-color: hsl(257, 97%, 60%, 0.70);
+}
+::ng-deep p-button.Flying:hover .p-button{
+    background-color: hsl(256, 81%, 76%, 0.70);
+}
+::ng-deep p-button.Steel:hover .p-button{
+    background-color: hsl(240, 19%, 76%, 0.70);
+}
+
+.progress{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 3vw;
+    margin: 5px;
+}
+
+::ng-deep #hp .p-progressbar-value {
+    background-color: #ff0000;
+    opacity: 0.9;
+    border-radius: 4px;
+    height: 20px;
+    margin: 2px;
+
+}
+
+::ng-deep #atk .p-progressbar-value{
+    background-color: #f08030;
+    opacity: 0.9;
+    border-radius: 4px;
+    height: 20px;
+    margin: 2px;
+}
+::ng-deep #def .p-progressbar-value{
+    background-color: #f8d030;
+    opacity: 0.9;
+    border-radius: 4px;
+    height: 20px;
+    margin: 2px;
+}
+::ng-deep #spatk .p-progressbar-value{
+    background-color: #6890f0;
+    opacity: 0.9;
+    border-radius: 4px;
+    height: 20px;
+    margin: 2px;
+}
+::ng-deep #spdef .p-progressbar-value{
+    background-color: #78c850;
+    opacity: 0.9;
+    border-radius: 4px;
+    height: 20px;
+    margin: 2px;
+}
+::ng-deep #speed .p-progressbar-value{
+    background-color: #f85888;
+    opacity: 0.9;
+    border-radius: 4px;
+    height: 20px;
+    margin: 2px;
+}

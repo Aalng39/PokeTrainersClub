@@ -1,0 +1,55 @@
+.emptylist{
+    margin: 50px 0px;
+    display: flex;
+    justify-content: center;
+    padding: auto;
+    text-align: center;
+}
+
+.userposts{
+    padding-bottom: 10px;
+}
+
+.post{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.image{
+    height: 4vw;
+    width: 4vw;
+    border-radius: 5px;
+}
+
+p-button.delete{
+    float: right;
+    margin: 20px;
+}
+
+.bookmarkbutton{
+    display: flex;
+    justify-content: right;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    column-count: 2;
+    column-gap: 10px;
+}
+
+::ng-deep .confirm .p-confirm-dialog-accept{
+    background-color: hsl(0, 52%, 54%);
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: azure;
+    height: 41px;
+}
+
+::ng-deep .confirm .p-confirm-dialog-accept:hover{
+    background-color: hsl(0, 52%, 54%, 0.7);
+}

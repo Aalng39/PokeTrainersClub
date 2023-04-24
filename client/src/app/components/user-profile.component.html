@@ -1,0 +1,59 @@
+<div class="user">
+    <p-fieldset legend="Trainer's Profile" [style]="{ width: '90vw' }">
+        <div class="split">
+            <img class="image" src={{image}}>
+            <p-card [style]="{ width: '50vw'}">
+                <table class="user-table"> 
+                    <tr>
+                        <td>
+                            <label>Username: </label>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p><b>{{username}}</b></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Email: </label>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p><b>{{email}}</b></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Pokémon Trainer Since: </label>
+                        </td>
+                        <td></td>
+                        <td>
+                            <p><b>{{date}}</b></p>
+                        </td>
+                    </tr>
+                </table> 
+            
+                <ng-template pTemplate="footer">
+                        <table class="button-table">
+                            <tr>    
+                                <td>
+                                    <p-button type="button" icon="pi pi-fw pi-bookmark" label="View My Team" [routerLink]="['/myteam']" styleClass="p-button-outlined p-button-secondary p-button-sm"></p-button>
+                                </td>
+                                <td></td>
+                                <td>
+                                    <p-button type="button" icon="pi pi-fw pi-inbox" label="View My Post" [routerLink]="['/forum/posts']" styleClass="p-button-secondary p-button-sm"></p-button>
+                                </td>
+                                <td></td>
+                                <td> 
+                                    <p-toast></p-toast>
+                                    <p-confirmDialog [style]="{width: '50vw'}" rejectButtonStyleClass="p-button-outlined p-button-secondary p-button-sm" 
+                                                    class="confirm"></p-confirmDialog>
+                                    <p-button type="button" label="Delete Account" class="delete" styleClass="p-button-sm" (click)="deleteAccount()"></p-button>
+                                </td>
+                            </tr>
+                        </table>
+                </ng-template>
+            </p-card>
+        </div>     
+    </p-fieldset>
+</div>
