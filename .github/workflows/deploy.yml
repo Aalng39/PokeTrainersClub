@@ -11,7 +11,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-        working-directory: ./server
 
       - name: Use Node 19
         uses: actions/setup-node@v3
@@ -20,11 +19,11 @@ jobs:
         working-directory: ./server
 
       - name: Install Railway
-        working-directory: ./serve
+        working-directory: ./server
         run: npm i -g @railway/cli
 
       - name: Deploy
-        working-directory: ./serve
+        working-directory: ./server
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
