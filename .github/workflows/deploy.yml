@@ -16,7 +16,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 19.1.0
-        working-directory: ./server
 
       - name: Install Railway
         working-directory: ./server
