@@ -47,7 +47,7 @@ export class LogInComponent implements OnInit{
       formData.set('password', this.signUpForm.value.password)
       formData.set('image', this.imageFile.nativeElement.files[0])
       
-      this.router.navigate(['/'])
+      
       console.log('>>> Form Data: ', formData)
       this.pokemonSvc.postPokemonTrainer(formData)
         .then(results => {
@@ -57,7 +57,7 @@ export class LogInComponent implements OnInit{
           console.log("Same primary key used...")
           this.signUpForm.reset()
         })
-
+        this.router.navigate(['/'])
       
       }else if(result.isValid == false){
       this.firebaseErrorMessage = result.message
@@ -77,13 +77,12 @@ export class LogInComponent implements OnInit{
       if(result == null){
         console.log('logging in...')
         this.pokemonSvc.logInPokemonTrainer(this.loginForm.value.email).then(result => { 
-        this.messageService.add({ severity: 'success', summary: 'Successfully Logged in', detail: 'Welcome Back ' + result.username, life: 2000})
-        this.router.navigate(['/profile'])
+        this.messageService.add({ severity: 'success', summary: 'Successfully Logged in', detail: 'Welcome Back ' + result.username, life: 2000})    
         }).catch(() => {
-          this.messageService.add({ severity: 'error', summary: 'Login Failed', detail: 'Invalid Username or Password! Please check!', life: 2000})
           console.log("user not found... ")
           this.loginForm.reset()
         })
+        this.router.navigate(['/profile'])
       }
       else if(result.isValid == false){
 

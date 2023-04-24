@@ -31,7 +31,7 @@ export class AuthService {
     })
     .catch(error => {
       console.log('Auth Service: signup error')
-      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'This Email is already registered with an account. Please login!', life: 2000})
+      this.messageService.add({ severity: 'error', summary: 'Sign Up Error', detail: 'This Email is already registered with an account. Please login!', life: 2000})
     })
 
    }
@@ -43,7 +43,7 @@ export class AuthService {
     })
     .catch(error => {
       console.log('Auth Service: login error...')
-      this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Invalid Email or Password.', life: 2000})
+      this.messageService.add({ severity: 'error', summary: 'Login Failed', detail: 'Invalid Email or Password.', life: 2000})
     })
    }
 
